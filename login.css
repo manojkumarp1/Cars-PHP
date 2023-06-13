@@ -1,0 +1,150 @@
+body {
+    background-image: linear-gradient(to top right, #b92b27, #1565C0);
+    height: 720px;
+}
+
+.container {
+     position: absolute;
+     box-sizing: border-box;
+     width: 33%;
+     background: white;
+     box-shadow: rgb(50 50 93 / 25%) 0px 50px 100px -20px, rgb(0 0 0 / 30%) 0px 30px 60px -30px;
+     border-radius: 20px;
+     padding: 20px;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+}
+
+.top {
+    position: relative;
+    font-family: 'Baloo 2', cursive;
+    font-weight: 900;
+    text-align: center;
+    padding-bottom: 21px;
+    top: 6px;
+    left: -6px;
+    font-size: 25px;
+}
+
+input[type=text] {
+    margin: 20px;
+    align-items: center;
+    /*box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;*/
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+    width: 310px;
+    height: 36px;
+    border-radius: 20px;
+    border: none;
+    border-color: transparent;
+    padding-left: 50px;
+    font-family: 'Baloo 2', cursive;
+}
+
+::placeholder {
+
+    font-family: 'Baloo 2', cursive;
+    color: #2a003d;
+    font-size: 15px;
+}
+
+.mail {
+    display: flex;
+    position: relative;
+    left: 19px;
+
+
+}
+
+.mail img {
+    position: absolute;
+    box-shadow: rgb(0 0 0 / 10%) 0px 10px 50px;
+    top: 25px;
+    left: 36px;
+
+}
+
+.pass {
+    display: flex;
+    position: relative;
+    left: 19px;
+}
+
+input[type=password] {
+    margin: 20px;
+    align-items: center;
+    /*box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;*/
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+    width: 310px;
+    height: 36px;
+    border-radius: 20px;
+    border: none;
+    border-color: transparent;
+    padding-left: 50px;
+    font-family: 'Baloo 2', cursive;
+}
+
+::placeholder {
+
+    font-family: 'Baloo 2', cursive;
+    color: #2a003d;
+    font-size: 15px;
+}
+
+.pass img {
+    position: absolute;
+    box-shadow: rgb(0 0 0 / 10%) 0px 10px 50px;
+    top: 25px;
+    left: 36px;
+}
+
+.eye {
+    position: relative;
+    top: -54px;
+    right: -353px;
+}
+
+.rem {
+    font-family: 'Baloo 2', cursive;
+    position: relative;
+    top: -40px;
+    left: 56px;
+    color: #311b92;
+    font-size: 15px;
+    opacity: 0.9;
+    display: flex;
+}
+
+.forgot {
+    position: relative;
+    right: -104px;
+    top: 14px;
+}
+
+.forgot a {
+    text-decoration: none;
+    color: #2a003d;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.btn {
+    position: relative;
+    background: #a64fcb;
+    text-align: center;
+    width: 156px;
+    height: 40px;
+    border: none;
+    font-family: 'Baloo 2', cursive;
+    left: 141px;
+    border-radius: 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+}
+
+.btn a {
+    text-decoration: none;
+    color: white;
+}

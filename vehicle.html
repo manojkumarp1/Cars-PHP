@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicles</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .dynamic-button {
+  padding: 10px 20px;
+  background-color: #4287f5;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.dynamic-button:hover {
+  background-color:maroon;
+}
+
+.dynamic-button:active {
+  background-color:green;
+}
+        .shortnote {
+            text-align: center;
+        }
+
+        .shortnote img {
+            position: relative;
+            
+        }
+
+        .maingallery {
+            background-color: #F6F6F6;
+            height: 500px;
+        }
+
+        .gallery {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .box,
+        .box1,
+        .box2 {
+            position: relative;
+            top: 20px;
+            padding: 2px;
+            background-color: lightblue;
+            width: 350px;
+            height: 390px;
+            padding-left: 40px;
+            border: 1px solid #e2e2e2;
+		transition: transform .2s; 
+  
+        }
+
+        .box img,
+        .box1 img,
+        .box2 img {
+            position: relative;
+            height: 100px;
+            width: 150px;
+            left: 20%;
+            top: 10%;
+        }
+
+        .box:hover,
+        .box1:hover,
+        .box2:hover {
+            transform: scale(1.05);
+        }
+
+        .price {
+            display: flex;
+
+        }
+
+        .info {
+            position: relative;
+            top: 10%;
+        }
+
+        .miniprice {
+            position: relative;
+            left: 80px;
+            font-size: 12px;
+            color: #929292;
+        }
+
+        .year {
+            color: #505050;
+            font-size: 14px;
+        }
+
+        .model {
+            font-size: 21px;
+            font-weight: bolder;
+            letter-spacing: 1px;
+            position: relative;
+            top: -5px;
+        }
+
+        .subcol {
+            font-size: 16px;
+            line-height: 0.5;
+            position: relative;
+            top: -15px;
+            color: #505050;
+        }
+
+        .subcol1 {
+            font-size: 16px;
+            line-height: 0.5;
+            position: relative;
+            top: -19px;
+            color: #505050;
+            left: 70px;
+        }
+
+        .explore {
+            color: #E10A1D;
+            font-size: 15px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .explore:hover {
+            text-decoration: underline;
+        }
+	
+	
+</style>
+    </style>
+</head>
+
+
+    <body>
+        <header style="height: 65px; border-bottom: 1px solid #bfbfbf;">
+            <div class="logo"><img src="./img/sport-car-logo-designs-Graphics-3677549-1.jpg" alt="" height="100px"
+                    width="150px"></div>
+            <div class="row">
+                <ul class="navbar">
+                    <li><a href="index.html">Home</li></a>
+                    <li><a href="index1.html">Find a Dealer</li></a>
+                    <li><a href="#" style="color: red; text-decoration: underline;">Select Vehicle</li></a>
+                    <li><a href="profile.jsp">Profile</li></a>
+                </ul>
+                <button class="btn-1"><a href="register.html">Sign Up</button></a>
+                <button class="btn-1"><a href="login.html">Log In</button></a>
+            </div>
+        </header>
+        <div class="shortnote" style="position:relative; top: 7px;">
+            <img src="./img/logo.png" alt="" width="150px" height="97px">
+            <p
+                style="font-family: Helvetica Bold, Arial Bold, sans-serif; font-size: 60px;position: relative; top: -53px;">
+                <strong> All Vehicles
+            </p></strong>
+            <p
+                style="    position: relative;top: -84px; font-size: 18px; color: #000000; opacity: 0.8; line-height: 0.2;">
+                Find your perfect vehicle. Narrow it down by price, mpg or whatever you like.</p>
+        </div>
+
+        <div class="maingallery">
+            <div class="gallery">
+                <!--1st box-->
+                <div class="box">
+                    <img src="./img/crop1.jpg" alt="">
+                    <div class="info">
+                        <p class="miniprice">$100000 as shown <sup style="color: #ff4040">1</sup> </p>
+                        <p class="year">2023</p>
+                        <p class="model">RR BM43</p>
+                        <div class="price">
+                            <div class="subcol">
+                                <p style="font-weight: 500;">$500000</p>
+                                <p style="font-size: 12px; color: #929292;">Starting MSRP <sup
+                                        style="color: #ff4040">1</sup> </p>
+                            </div>
+                            <div class="subcol1">
+                                <p style="font-weight: 500;">18/22</p>
+                                <p style="font-size: 12px; color: #929292;">Est. MPG <sup
+                                        style="color: #ff4040">46</sup> </p>
+                            </div>
+                        </div>
+                        <form action="deal.jsp" method="post" >
+                            <button class="dynamic-button" name="butt" value="100">Dealer</button>
+                            <form>
+                    </div>
+                </div>
+                <!--2nd box-->
+                <div class="box1">
+                    <img src="./img/2.jpg" alt="" style="left: 14%;">
+                    <div class="info">
+                        <p class="miniprice">$500000 as shown <sup style="color: #ff4040">1</sup> </p>
+                        <p class="year">2023</p>
+                        <p class="model">Porsche Panamera</p>
+                        <div class="price">
+                            <div class="subcol">
+                                <p style="font-weight: 500;">$2000000</p>
+                                <p style="font-size: 12px; color: #929292;">Starting MSRP <sup
+                                        style="color: #ff4040">1</sup> </p>
+                            </div>
+                            <div class="subcol1">
+                                <p style="font-weight: 500;">5/10</p>
+                                <p style="font-size: 12px; color: #929292;">Est. MPG <sup
+                                        style="color: #ff4040">57</sup> </p>
+                            </div>
+                        </div>
+                        <form action="deal.jsp" method="post" >
+                            <button class="dynamic-button" name="butt" value="102">Dealer</button>
+                         <form>
+                    </div>
+                </div>
+                <!--3rd box-->
+                <div class="box2">
+                    <img src="./img/copy9.jpg" alt="">
+                    <div class="info">
+                        <p class="miniprice">$500000 as shown <sup style="color: #ff4040">1</sup> </p>
+                        <p class="year">2021</p>
+                        <p class="model">TRON T45</p>
+                        <div class="price">
+                            <div class="subcol">
+                                <p style="font-weight: 500;">$8000000</p>
+                                <p style="font-size: 12px; color: #929292;">Starting MSRP <sup
+                                        style="color: #ff4040">1</sup> </p>
+                            </div>
+                            <div class="subcol1">
+                                <p style="font-weight: 500;">10/20</p>
+                                <p style="font-size: 12px; color: #929292;">Est. MPG <sup
+                                        style="color: #ff4040">37</sup> </p>
+                            </div>
+                        </div>
+                        <form action="deal.jsp" method="post" >
+                            <button class="dynamic-button" name="butt" value="101">Dealer</button>
+                            <form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="maingallery">
+            <div class="gallery">
+                <!--4th box-->
+                <div class="box">
+                    <img src="./img/8.jpg" alt="" style="left: 12%;">
+                    <div class="info">
+                        <p class="miniprice">$100000 as shown <sup style="color: #ff4040">1</sup> </p>
+                        <p class="year">2023</p>
+                        <p class="model">Lamborghini</p>
+                        <div class="price">
+                            <div class="subcol">
+                                <p style="font-weight: 500;">$30,00000</p>
+                                <p style="font-size: 12px; color: #929292;">Starting MSRP <sup
+                                        style="color: #ff4040">1</sup> </p>
+                            </div>
+                            <div class="subcol1">
+                                <p style="font-weight: 500;">10/30</p>
+                                <p style="font-size: 12px; color: #929292;">Est. MPG <sup style="color: #ff4040">4</sup>
+                                </p>
+                            </div>
+                        </div>
+                        <form action="deal.jsp" method="post" >
+                            <button class="dynamic-button" name="butt" value="103">Dealer</button>
+                            <form>
+                    </div>
+                </div>
+                <!--5th box-->
+                <div class="box1">
+                    <img src="./img/6.jpg" alt="" style="left: 18%;">
+                    <div class="info">
+                        <p class="miniprice">$1500000 as shown <sup style="color: #ff4040">1</sup> </p>
+                        <p class="year">2020</p>
+                        <p class="model">Ferrari</p>
+                        <div class="price">
+                            <div class="subcol">
+                                <p style="font-weight: 500;">$30000000</p>
+                                <p style="font-size: 12px; color: #929292;">Starting MSRP <sup
+                                        style="color: #ff4040">1</sup> </p>
+                            </div>
+                            <div class="subcol1">
+                                <p style="font-weight: 500;">23/80</p>
+                                <p style="font-size: 12px; color: #929292;">Est. MPG <sup
+                                        style="color: #ff4040">68</sup> </p>
+                            </div>
+                        </div>
+                        <form action="deal.jsp" method="post" >
+                            <button class="dynamic-button" name="butt" value="104">Dealer</button>
+                            <form>                    </div>
+                </div>
+                <!--6th box-->
+                <div class="box2">
+                    <img src="./img/3.jpg" alt="" style="left: 13%;">
+                    <div class="info">
+                        <p class="miniprice">$2000000 as shown <sup style="color: #ff4040">1</sup> </p>
+                        <p class="year">2021</p>
+                        <p class="model">Highlander</p>
+                        <div class="price">
+                            <div class="subcol">
+                                <p style="font-weight: 500;">$50000000</p>
+                                <p style="font-size: 12px; color: #929292;">Starting MSRP <sup
+                                        style="color: #ff4040">1</sup> </p>
+                            </div>
+                            <div class="subcol1">
+                                <p style="font-weight: 500;">5/10</p>
+                                <p style="font-size: 12px; color: #929292;">Est. MPG <sup
+                                        style="color: #ff4040">68</sup> </p>
+                            </div>
+                        </div>
+                        <form action="deal.jsp" method="post" >
+                            <button class="dynamic-button" name="butt" value="105">Dealer</button>
+                        <form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="maingallery">
+            <div class="gallery">
+                <!--7th box-->
+                <div class="box">
+                    <img style="left: 14%;" src="./img/crop7.jpg" alt="">
+                    <div class="info">
+                        <p class="miniprice">$1500000 as shown <sup style="color: #ff4040">1</sup> </p>
+                        <p class="year">2021</p>
+                        <p class="model">Ferrari 458</p>
+                        <div class="price">
+                            <div class="subcol">
+                                <p style="font-weight: 500;">$3000000</p>
+                                <p style="font-size: 12px; color: #929292;">Starting MSRP <sup
+                                        style="color: #ff4040">1</sup> </p>
+                            </div>
+                            <div class="subcol1">
+                                <p style="font-weight: 500;">5/10</p>
+                                <p style="font-size: 12px; color: #929292;">Est. MPG <sup
+                                        style="color: #ff4040">89</sup> </p>
+                            </div>
+                        </div>
+                        <form action="deal.jsp" method="post" >
+                            <button class="dynamic-button" name="butt" value="106">Dealer</button>
+                            <form>
+                    </div>
+                </div>
+                <!--8th box-->
+                <div class="box1">
+                    <img style="left: 10%;" src="./img/Car15.PNG" alt="">
+                    <div class="info">
+                        <p class="miniprice">$1000000 as shown <sup style="color: #ff4040">1</sup> </p>
+                        <p class="year">2022</p>
+                        <p class="model">Toyota SUV</p>
+                        <div class="price">
+                            <div class="subcol">
+                                <p style="font-weight: 500;">$4000000</p>
+                                <p style="font-size: 12px; color: #929292;">Starting MSRP <sup
+                                        style="color: #ff4040">1</sup> </p>
+                            </div>
+                            <div class="subcol1">
+                                <p style="font-weight: 500;">15/10</p>
+                                <p style="font-size: 12px; color: #929292;">Est. MPG <sup
+                                        style="color: #ff4040">52</sup> </p>
+                            </div>
+                        </div>
+                        <form action="deal.jsp" method="post" >
+                            <button class="dynamic-button" name="butt" value="107">Dealer</button>
+                            <form>
+                    </div>
+                </div>
+                <!--9th box-->
+                <div class="box2">
+                    <img src="./img/Car9.PNG" alt="" style="left: 14%;">
+                    <div class="info">
+                        <p class="miniprice">$27,575 as shown <sup style="color: #ff4040">1</sup> </p>
+                        <p class="year">2021</p>
+                        <p class="model">C-HR</p>
+                        <div class="price">
+                            <div class="subcol">
+                                <p style="font-weight: 500;">$21,595</p>
+                                <p style="font-size: 12px; color: #929292;">Starting MSRP <sup
+                                        style="color: #ff4040">1</sup> </p>
+                            </div>
+                            <div class="subcol1">
+                                <p style="font-weight: 500;">27/31</p>
+                                <p style="font-size: 12px; color: #929292;">Est. MPG <sup
+                                        style="color: #ff4040">16</sup> </p>
+                            </div>
+                        </div>
+                        <form action="deal.jsp" method="post" >
+                            <button class="dynamic-button" name="butt" value="102">Dealer</button>
+                            <form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="maingallery">
+            <div class="gallery">
+                <!--10th box-->
+                <div class="box">
+                    <img src="./img/Car10.PNG" alt="" style="left: 12%;">
+                    <div class="info">
+                        <p class="miniprice">$36,045 as shown <sup style="color: #ff4040">1</sup> </p>
+                        <p class="year">2021</p>
+                        <p class="model">Camry</p>
+                        <div class="price">
+                            <div class="subcol">
+                                <p style="font-weight: 500;">$25,045</p>
+                                <p style="font-size: 12px; color: #929292;">Starting MSRP <sup
+                                        style="color: #ff4040">1</sup> </p>
+                            </div>
+                            <div class="subcol1">
+                                <p style="font-weight: 500;">28/39</p>
+                                <p style="font-size: 12px; color: #929292;">Est. MPG <sup
+                                        style="color: #ff4040">80</sup> </p>
+                            </div>
+                        </div>
+                        <form action="deal.jsp" method="post" >
+                            <button class="dynamic-button" name="butt" value="103">Dealer</button>
+                            <form>
+                    </div>
+                </div>
+                <!--11th box-->
+                <div class="box1">
+                    <img src="./img/Car11.PNG" alt="" style="left: 18%;">
+                    <div class="info">
+                        <p class="miniprice">$51,065 as shown <sup style="color: #ff4040">1</sup> </p>
+                        <p class="year">2021</p>
+                        <p class="model">Camry Hybrid</p>
+                        <div class="price">
+                            <div class="subcol">
+                                <p style="font-weight: 500;">$27,270</p>
+                                <p style="font-size: 12px; color: #929292;">Starting MSRP <sup
+                                        style="color: #ff4040">1</sup> </p>
+                            </div>
+                            <div class="subcol1">
+                                <p style="font-weight: 500;">51/53</p>
+                                <p style="font-size: 12px; color: #929292;">Est. MPG <sup
+                                        style="color: #ff4040">80</sup> </p>
+                            </div>
+                        </div>
+                        <form action="deal.jsp" method="post" >
+                            <button class="dynamic-button" name="butt" value="100">Dealer</button>
+                            <form>
+                    </div>
+                </div>
+                <!--12th box-->
+                <div class="box2">
+                    <img src="./img/Car12.PNG" alt="" style="left: 13%;">
+                    <div class="info">
+                        <p class="miniprice">$28,685 as shown <sup style="color: #ff4040">1</sup> </p>
+                        <p class="year">2021</p>
+                        <p class="model">Corolla</p>
+                        <div class="price">
+                            <div class="subcol">
+                                <p style="font-weight: 500;">$20,025</p>
+                                <p style="font-size: 12px; color: #929292;">Starting MSRP <sup
+                                        style="color: #ff4040">38</sup> </p>
+                            </div>
+                            <div class="subcol1">
+                                <p style="font-weight: 500;">21/29</p>
+                                <p style="font-size: 12px; color: #929292;">Est. MPG <sup
+                                        style="color: #ff4040">68</sup> </p>
+                            </div>
+                        </div>
+                        <form action="deal.jsp" method="post" >
+                            <button class="dynamic-button" name="butt" value="101">Dealer</button>
+                            <form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="maingallery">
+            <div class="gallery">
+                <!--13th box-->
+                <div class="box">
+                    <img src="./img/Car13.PNG" alt="" style="left: 12%;">
+                    <div class="info">
+                        <p class="miniprice">$24,765 as shown <sup style="color: #ff4040">1</sup> </p>
+                        <p class="year">2021</p>
+                        <p class="model">Corolla Hatchback</p>
+                        <div class="price">
+                            <div class="subcol">
+                                <p style="font-weight: 500;">$20,715</p>
+                                <p style="font-size: 12px; color: #929292;">Starting MSRP <sup
+                                        style="color: #ff4040">1</sup> </p>
+                            </div>
+                            <div class="subcol1">
+                                <p style="font-weight: 500;">30/38</p>
+                                <p style="font-size: 12px; color: #929292;">Est. MPG <sup
+                                        style="color: #ff4040">36</sup> </p>
+                            </div>
+                        </div>
+                        <form action="deal.jsp" method="post" >
+                            <button class="dynamic-button" name="butt" value="102">Dealer</button>
+                            <form>
+                    </div>
+                </div>
+                <!--14th box-->
+                <div class="box1">
+                    <img src="./img/Car14.PNG" alt="" style="left: 18%;">
+                    <div class="info">
+                        <p class="miniprice">$24,025 as shown <sup style="color: #ff4040">1</sup> </p>
+                        <p class="year">2021</p>
+                        <p class="model">Corolla Hybrid</p>
+                        <div class="price">
+                            <div class="subcol">
+                                <p style="font-weight: 500;">$23,600</p>
+                                <p style="font-size: 12px; color: #929292;">Starting MSRP <sup
+                                        style="color: #ff4040">1</sup> </p>
+                            </div>
+                            <div class="subcol1">
+                                <p style="font-weight: 500;">53/52</p>
+                                <p style="font-size: 12px; color: #929292;">Est. MPG <sup
+                                        style="color: #ff4040">38</sup> </p>
+                            </div>
+                        </div>
+                        <form action="deal.jsp" method="post" >
+                            <button class="dynamic-button" name="butt" value="103">Dealer</button>
+                            <form>
+                    </div>
+                </div>
+                <!--15th box-->
+                <div class="box2">
+                    <img src="./img/Car15.PNG" alt="" style="left: 13%; top: 5%;">
+                    <div class="info" style="top: 3%;">
+                        <p class="miniprice">$87,995 as shown <sup style="color: #ff4040">1</sup> </p>
+                        <p class="year">2021</p>
+                        <p class="model">Land Cruiser</p>
+                        <div class="price">
+                            <div class="subcol">
+                                <p style="font-weight: 500;">$85,565</p>
+                                <p style="font-size: 12px; color: #929292;">Starting MSRP <sup
+                                        style="color: #ff4040">1</sup> </p>
+                            </div>
+                            <div class="subcol1">
+                                <p style="font-weight: 500;">13/17</p>
+                                <p style="font-size: 12px; color: #929292;">Est. MPG <sup
+                                        style="color: #ff4040">17</sup> </p>
+                            </div>
+                        </div>
+                        <form action="deal.jsp" method="post" >
+                            <button class="dynamic-button" name="butt" value="104">Dealer</button>
+                            <form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="maingallery">
+            <div class="gallery">
+                <!--16th box-->
+                <div class="box">
+                    <img src="./img/Car16.PNG" alt="" style="left: 12%;">
+                    <div class="info">
+                        <p class="miniprice">$66,425 as shown <sup style="color: #ff4040">1</sup> </p>
+                        <p class="year">2021</p>
+                        <p class="model">Mirai</p>
+                        <div class="price">
+                            <div class="subcol">
+                                <p style="font-weight: 500;">$49,500</p>
+                                <p style="font-size: 12px; color: #929292;">Starting MSRP <sup
+                                        style="color: #ff4040">1</sup> </p>
+                            </div>
+                            <div class="subcol1">
+                                <p style="font-weight: 500;">67/64</p>
+                                <p style="font-size: 12px; color: #929292;">Est. MPG <sup
+                                        style="color: #ff4040">81</sup> </p>
+                            </div>
+                        </div>
+                        <form action="deal.jsp" method="post" >
+                            <button class="dynamic-button" name="butt" value="105">Dealer</button>
+                            <form>                    </div>
+                </div>
+                <!--17th box-->
+                <div class="box1">
+                    <img src="./img/Car17.PNG" alt="" style="left: 18%;">
+                    <div class="info">
+                        <p class="miniprice">$30,300 as shown <sup style="color: #ff4040">1</sup> </p>
+                        <p class="year">2021</p>
+                        <p class="model">Prius</p>
+                        <div class="price">
+                            <div class="subcol">
+                                <p style="font-weight: 500;">$24,525</p>
+                                <p style="font-size: 12px; color: #929292;">Starting MSRP <sup
+                                        style="color: #ff4040">1</sup> </p>
+                            </div>
+                            <div class="subcol1">
+                                <p style="font-weight: 500;">54/50</p>
+                                <p style="font-size: 12px; color: #929292;">Est. MPG <sup
+                                        style="color: #ff4040">11</sup> </p>
+                            </div>
+                        </div>
+                        <form action="deal.jsp" method="post" >
+                            <button class="dynamic-button" name="butt" value="102">Dealer</button>
+                            <form>
+                    </div>
+                </div>
+                <!--18th box-->
+                <div class="box2">
+                    <img src="./img/Car18.PNG" alt="" style="left: 13%;">
+                    <div class="info">
+                        <p class="miniprice">$34,425 as shown <sup style="color: #ff4040">1</sup> </p>
+                        <p class="year">2021</p>
+                        <p class="model">Prius Prime</p>
+                        <div class="price">
+                            <div class="subcol">
+                                <p style="font-weight: 500;">$35,085</p>
+                                <p style="font-size: 12px; color: #929292;">Starting MSRP <sup
+                                        style="color: #ff4040">1</sup> </p>
+                            </div>
+                            <div class="subcol1">
+                                <p style="font-weight: 500;">54/133</p>
+                                <p style="font-size: 12px; color: #929292;">Est. MPG <sup
+                                        style="color: #ff4040">61</sup> </p>
+                            </div>
+                        </div>
+                        <form action="deal.jsp" method="post" >
+                            <button class="dynamic-button" name="butt" value="103">Dealer</button>
+                            <form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="maingallery">
+            <div class="gallery">
+                <!--19th box-->
+                <div class="box">
+                    <img src="./img/Car19.PNG" alt="" style="left: 12%;">
+                    <div class="info">
+                        <p class="miniprice">$34,780 as shown <sup style="color: #ff4040">1</sup> </p>
+                        <p class="year">2021</p>
+                        <p class="model">RAV4</p>
+                        <div class="price">
+                            <div class="subcol">
+                                <p style="font-weight: 500;">$26,250</p>
+                                <p style="font-size: 12px; color: #929292;">Starting MSRP <sup
+                                        style="color: #ff4040">1</sup> </p>
+                            </div>
+                            <div class="subcol1">
+                                <p style="font-weight: 500;">28/35</p>
+                                <p style="font-size: 12px; color: #929292;">Est. MPG <sup
+                                        style="color: #ff4040">59</sup> </p>
+                            </div>
+                        </div>
+                        <form action="deal.jsp" method="post" >
+                            <button class="dynamic-button" name="butt" value="101">Dealer</button>
+                            <form>                    </div>
+                </div>
+                <!--20th box-->
+                <div class="box1">
+                    <img src="./img/Car20.PNG" alt="" style="left: 18%;">
+                    <div class="info">
+                        <p class="miniprice">$35,175 as shown <sup style="color: #ff4040">1</sup> </p>
+                        <p class="year">2021</p>
+                        <p class="model">RAV4 Hybrid</p>
+                        <div class="price">
+                            <div class="subcol">
+                                <p style="font-weight: 500;">$28,800</p>
+                                <p style="font-size: 12px; color: #929292;">Starting MSRP <sup
+                                        style="color: #ff4040">1</sup> </p>
+                            </div>
+                            <div class="subcol1">
+                                <p style="font-weight: 500;">41/38</p>
+                                <p style="font-size: 12px; color: #929292;">Est. MPG <sup
+                                        style="color: #ff4040">59</sup> </p>
+                            </div>
+                        </div>
+                        <form action="deal.jsp" method="post" >
+                            <button class="dynamic-button" name="butt" value="105">Dealer</button>
+                            <form>
+                    </div>
+                </div>
+                <!--21st box-->
+                <div class="box2">
+                    <img src="./img/Car21.PNG" alt="" style="left: 13%;">
+                    <div class="info">
+                        <p class="miniprice">$47,760 as shown <sup style="color: #ff4040">1</sup> </p>
+                        <p class="year">2021</p>
+                        <p class="model">RAV4 Prime</p>
+                        <div class="price">
+                            <div class="subcol">
+                                <p style="font-weight: 500;">$35,085</p>
+                                <p style="font-size: 12px; color: #929292;">Starting MSRP <sup
+                                        style="color: #ff4040">1</sup> </p>
+                            </div>
+                            <div class="subcol1">
+                                <p style="font-weight: 500;">38/94</p>
+                                <p style="font-size: 12px; color: #929292;">Est. MPG <sup
+                                        style="color: #ff4040">19</sup> </p>
+                            </div>
+                        </div>
+                        <form action="deal.jsp" method="post" >
+                            <button class="dynamic-button" name="butt" value="104">Dealer</button>
+                            <form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="maingallery">
+            <div class="gallery">
+                <!--22nd box-->
+                <div class="box">
+                    <img src="./img/Car22.PNG" alt="" style="left: 12%;">
+                    <div class="info">
+                        <p class="miniprice">$59,420 as shown <sup style="color: #ff4040">1</sup> </p>
+                        <p class="year">2021</p>
+                        <p class="model">Sequoia</p>
+                        <div class="price">
+                            <div class="subcol">
+                                <p style="font-weight: 500;">$50,400</p>
+                                <p style="font-size: 12px; color: #929292;">Starting MSRP <sup
+                                        style="color: #ff4040">1</sup> </p>
+                            </div>
+                            <div class="subcol1">
+                                <p style="font-weight: 500;">13/17</p>
+                                <p style="font-size: 12px; color: #929292;">Est. MPG <sup
+                                        style="color: #ff4040">18</sup> </p>
+                            </div>
+                        </div>
+                        <form action="deal.jsp" method="post" >
+                            <button class="dynamic-button" name="butt" value="101">Dealer</button>
+                            <form>                    </div>
+                </div>
+                <!--23rd box-->
+                <div class="box1">
+                    <img src="./img/Car23.PNG" alt="" style="left: 18%;">
+                    <div class="info">
+                        <p class="miniprice">$42,000 as shown <sup style="color: #ff4040">1</sup> </p>
+                        <p class="year">2021</p>
+                        <p class="model">Sienna</p>
+                        <div class="price">
+                            <div class="subcol">
+                                <p style="font-weight: 500;">$34,460</p>
+                                <p style="font-size: 12px; color: #929292;">Starting MSRP <sup
+                                        style="color: #ff4040">1</sup> </p>
+                            </div>
+                            <div class="subcol1">
+                                <p style="font-weight: 500;">36/36</p>
+                                <p style="font-size: 12px; color: #929292;">Est. MPG <sup
+                                        style="color: #ff4040">77</sup> </p>
+                            </div>
+                        </div>
+                        <form action="deal.jsp" method="post" >
+                            <button class="dynamic-button" name="butt" value="103">Dealer</button>
+                            <form>
+                    </div>
+                </div>
+                <!--24th box-->
+                <div class="box2">
+                    <img src="./img/Car24.PNG" alt="" style="left: 13%;">
+                    <div class="info">
+                        <p class="miniprice">$37,530 as shown <sup style="color: #ff4040">1</sup> </p>
+                        <p class="year">2021</p>
+                        <p class="model">Tacoma</p>
+                        <div class="price">
+                            <div class="subcol">
+                                <p style="font-weight: 500;">$26,400</p>
+                                <p style="font-size: 12px; color: #929292;">Starting MSRP <sup
+                                        style="color: #ff4040">1</sup> </p>
+                            </div>
+                            <div class="subcol1">
+                                <p style="font-weight: 500;">18/22</p>
+                                <p style="font-size: 12px; color: #929292;">Est. MPG <sup
+                                        style="color: #ff4040">78</sup> </p>
+                            </div>
+                        </div>
+                        <form action="deal.jsp" method="post" >
+                            <button class="dynamic-button" name="butt" value="104">Dealer</button>
+                            <form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="maingallery">
+            <div class="gallery">
+                <!--25th box-->
+                <div class="box">
+                    <img src="./img/Car25.PNG" alt="" style="left: 12%;">
+                    <div class="info">
+                        <p class="miniprice">$47,655 as shown <sup style="color: #ff4040">1</sup> </p>
+                        <p class="year">2021</p>
+                        <p class="model">Tundra</p>
+                        <div class="price">
+                            <div class="subcol">
+                                <p style="font-weight: 500;">$34,025</p>
+                                <p style="font-size: 12px; color: #929292;">Starting MSRP <sup
+                                        style="color: #ff4040">1</sup> </p>
+                            </div>
+                            <div class="subcol1">
+                                <p style="font-weight: 500;">13/17</p>
+                                <p style="font-size: 12px; color: #929292;">Est. MPG <sup
+                                        style="color: #ff4040">18</sup> </p>
+                            </div>
+                        </div>
+                        <form action="deal.jsp" method="post" >
+                            <button class="dynamic-button" name="butt" value="105">Dealer</button>
+                            <form>
+                    </div>
+                </div>
+                <!--26th box-->
+                <div class="box1">
+                    <img src="./img/Car26.PNG" alt="" style="left: 18%;">
+                    <div class="info">
+                        <p class="miniprice">$39,900 as shown <sup style="color: #ff4040">1</sup> </p>
+                        <p class="year">2021</p>
+                        <p class="model">Venza</p>
+                        <div class="price">
+                            <div class="subcol">
+                                <p style="font-weight: 500;">$32,570</p>
+                                <p style="font-size: 12px; color: #929292;">Starting MSRP <sup
+                                        style="color: #ff4040">1</sup> </p>
+                            </div>
+                            <div class="subcol1">
+                                <p style="font-weight: 500;">40/37</p>
+                                <p style="font-size: 12px; color: #929292;">Est. MPG <sup
+                                        style="color: #ff4040">70</sup> </p>
+                            </div>
+                        </div>
+                        <form action="deal.jsp" method="post" >
+                            <button class="dynamic-button" name="butt" value="100">Dealer</button>
+                            <form>
+                    </div>
+                </div>
+                <!--27th box-->
+                <div class="box1">
+                    <img src="./img/Car17.PNG" alt="" style="left: 18%;">
+                    <div class="info">
+                        <p class="miniprice">$30,300 as shown <sup style="color: #ff4040">1</sup> </p>
+                        <p class="year">2021</p>
+                        <p class="model">Prius</p>
+                        <div class="price">
+                            <div class="subcol">
+                                <p style="font-weight: 500;">$24,525</p>
+                                <p style="font-size: 12px; color: #929292;">Starting MSRP <sup
+                                        style="color: #ff4040">1</sup> </p>
+                            </div>
+                            <div class="subcol1">
+                                <p style="font-weight: 500;">54/50</p>
+                                <p style="font-size: 12px; color: #929292;">Est. MPG <sup
+                                        style="color: #ff4040">11</sup> </p>
+                            </div>
+                        </div>
+                        <form action="deal.jsp" method="post" >
+                            <button class="dynamic-button" name="butt" value="101">Dealer</button>
+                            <form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+    </body>
+
+</html>
