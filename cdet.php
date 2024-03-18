@@ -1,10 +1,5 @@
-<%@ page import="java.sql.*" %>
-
-
-
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,7 +13,6 @@
 
         .shortnote img {
             position: relative;
-            
         }
 
         .maingallery {
@@ -31,9 +25,7 @@
             justify-content: space-evenly;
         }
 
-        .box,
-        .box1,
-        .box2 {
+        .box {
             position: relative;
             top: 20px;
             padding: 2px;
@@ -42,13 +34,12 @@
             height: 430px;
             padding-left: 40px;
             border: 1px solid #e2e2e2;
-    transition: transform .2s; 
-  
+            transition: transform .2s;
+            display: inline-block; /* Display as inline-block for horizontal arrangement */
+            margin: 10px; /* Add some margin between boxes */
         }
 
-        .box img,
-        .box1 img,
-        .box2 img {
+        .box img {
             height: 100px;
             width: 150px;
             position: relative;
@@ -56,15 +47,12 @@
             top: 10%;
         }
 
-        .box:hover,
-        .box1:hover,
-        .box2:hover {
+        .box:hover {
             transform: scale(1.05);
         }
 
         .price {
             display: flex;
-
         }
 
         .info {
@@ -84,13 +72,6 @@
             font-size: 14px;
         }
 
-        .model {
-            font-size: 21px;
-            font-weight: 100;
-            letter-spacing: 1px;
-            position: relative;
-            top: -5px;
-        }
         .mode {
             font-size: 21px;
             font-weight: bolder;
@@ -98,6 +79,14 @@
             position: relative;
             text-transform: uppercase;
             text-align: center;
+            top: -5px;
+        }
+
+        .model {
+            font-size: 21px;
+            font-weight: 100;
+            letter-spacing: 1px;
+            position: relative;
             top: -5px;
         }
 
@@ -128,65 +117,59 @@
         .explore:hover {
             text-decoration: underline;
         }
-  
-  
-</style>
+    </style>
+</head>
 <body>
-    <CENTER>
-    <h1>AVAILABLE CARS</h1>
-    </CENTER>
+    <center>
+        <h1>AVAILABLE CARS</h1>
+    </center>
     <div class="maingallery">
         <div class="gallery">
-    <%
-       String did = request.getParameter("but");
+            <?php
+            $did = $_REQUEST["but"];
 
+            try {
+                $conn = new mysqli("localhost", "root", "manoj", "manoj");
+                if ($conn->connect_error) {
+                    die("Connection failed: " . $conn->connect_error);
+                }
 
+                $stmt = $conn->prepare("SELECT * FROM available WHERE Did=?");
+                $stmt->bind_param("s", $did);
+                $stmt->execute();
+                $result = $stmt->get_result();
 
-    try
-    {
-      
-      Class.forName("com.mysql.jdbc.Driver");
-    
-      Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/manoj", "root", "");
-      PreparedStatement pst = con.prepareStatement("select * from available where Did='"+did+"'");
-        ResultSet rs= pst.executeQuery();
-       while(rs.next())
-       {
-        
-        %>
-  
+                while ($row = $result->fetch_assoc()) {
+            ?>
                 <!--1st box-->
                 <div class="box">
-                    <img src= <%= rs.getString(8) %> alt="">
+                    <img src="<?php echo $row['img']; ?>" alt="">
                     <div class="info">
-                        <p class="mode"><%= rs.getString(2) %></p>
-                        <p class="miniprice">$ <%= rs.getString(3) %> as shown <sup style="color: #ff4040">1</sup> </p>
-                        <p class="year"><%= rs.getString(4) %></p>
-                        <p class="model"><%= rs.getString(5) %></p>
+                        <p class="mode"><?php echo $row['name']; ?></p>
+                        <p class="miniprice">$ <?php echo $row['miniprice']; ?> as shown <sup style="color: #ff4040">1</sup> </p>
+                        <p class="year"><?php echo $row['year']; ?></p>
+                        <p class="model"><?php echo $row['model']; ?></p>
                         <div class="price">
                             <div class="subcol">
-                                <p style="font-weight: 500;">$<%= rs.getString(6) %></p>
-                                <p style="font-size: 12px; color: #929292;">Starting MSRP <sup
-                                        style="color: #ff4040">1</sup> </p>
+                                <p style="font-weight: 500;">$<?php echo $row['msrp']; ?></p>
+                                <p style="font-size: 12px; color: #929292;">Starting MSRP <sup style="color: #ff4040">1</sup> </p>
                             </div>
                             <div class="subcol1">
-                                <p style="font-weight: 500;"><%= rs.getString(9) %></p>
-                                <p style="font-size: 12px; color: #929292;">Est. MPG <sup
-                                        style="color: #ff4040">46</sup> </p>
+                                <p style="font-weight: 500;"><?php echo $row['mpg']; ?></p>
+                                <p style="font-size: 12px; color: #929292;">Est. MPG <sup style="color: #ff4040">46</sup> </p>
                             </div>
                         </div>
                         <a href="https://www.cardekho.com/mostpopularcars" target="blank" class="explore">Explore</a>
                     </div>
                 </div>
-                <% 
-               
-            
-        }
+            <?php
+                }
+                $conn->close();
+            } catch (Exception $e) {
+                echo $e->getMessage();
             }
-            catch(Exception e)
-              {
-                out.println(e);
-              
-              }
-            %>
-  </body>
+            ?>
+        </div>
+    </div>
+</body>
+</html>
